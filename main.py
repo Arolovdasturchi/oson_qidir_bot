@@ -95,7 +95,7 @@ async def search(update: Update, context: ContextTypes.DEFAULT_TYPE):
     else:
         results = search_messages(query)
         if not results:
-            await update.message.reply_text("Hech narsa topilmadi 😔")
+            await update.message.reply_text("Hech narsa topilmadi afsuski😔")
         else:
             reply = "\n\n".join([f"[{chat}] {user}: {text}" for chat, user, text in results])
             await update.message.reply_text(f"🔎 Natijalar:\n\n{reply}")
